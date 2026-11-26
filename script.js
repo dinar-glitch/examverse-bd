@@ -64,13 +64,17 @@ async function startExam(type) {
             Math.floor(Math.random() * availableExams.length)
         ];
 
-        questions = selectedExam.questions;
-        currentQuestion = 0;
-        answers = {};
-        markedQuestions = [];
+       sessionStorage.setItem(
+    "examQuestions",
+    JSON.stringify(selectedExam.questions)
+);
 
-        window.location.href = "exam.html";
+sessionStorage.setItem(
+    "examTitle",
+    selectedExam.exam || selectedExam.name || "Practice Examination"
+);
 
+window.location.href = "exam.html";
     } catch (error) {
         alert("Error loading questions: " + error.message);
     }
@@ -253,9 +257,38 @@ function saveExamResult(score, category) {
 
 // Initialize website
 document.addEventListener("DOMContentLoaded", function () {
+
     if (document.getElementById("totalExams")) {
         loadStatistics();
     }
 
+    if (document.getElementById("questionText")) {
+        loadExamPage();
+    }
+
     console.log("ExamVerse BD is running!");
+
 });
+// Load examination page
+function loadExamPage() {
+    const savedQuestions = sessionStorage.getItem("examQuestions");
+
+    if (!savedQuestions) {
+        alert("No examination selected!");
+        window.location.href = "index.html";
+        return;
+    }
+
+    questions = JSON.parse(savedQuestions);
+
+    currentQuestion = 0;
+    answers = {};
+    markedQuestions = [];
+    timeLeft = 60 * 60;
+
+    document.getElementById("examTitle").textContent =
+        sessionStorage.getItem("examTitle") || "Examination";
+
+    displayQuestion();
+    startTimer();
+}
