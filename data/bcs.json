@@ -1,0 +1,18 @@
+{
+  "examinations": [
+    {
+      "id": "bcs_35",
+      "name": "35th BCS",
+      "year": 2015,
+      "type": "BCS",
+      "questions": []
+    },
+    {
+      "id": "bcs_36",
+      "name": "36th BCS",
+      "year": 2016,
+      "type": "BCS",
+      "questions": []
+    }
+  ]
+}
