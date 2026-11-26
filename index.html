@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ExamVerse BD | Personal Exam Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">ExamVerse <span>BD</span></div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#bcs">BCS</a>
+            <a href="#bank">Bank Exams</a>
+            <a href="#practice">Practice</a>
+        </nav>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main id="dashboard">
+
+        <section class="welcome">
+            <h1>Welcome to ExamVerse BD</h1>
+            <p>Your personal examination preparation platform.</p>
+            <p>তোমার পরীক্ষার প্রস্তুতি শুরু হোক এখান থেকেই।</p>
+        </section>
+
+        <!-- Statistics -->
+        <section class="statistics">
+
+            <div class="card">
+                <h3>Total Exams</h3>
+                <p id="totalExams">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Average Score</h3>
+                <p id="averageScore">0%</p>
+            </div>
+
+            <div class="card">
+                <h3>Best Score</h3>
+                <p id="bestScore">0%</p>
+            </div>
+
+        </section>
+
+        <!-- Examination Categories -->
+        <section class="exams">
+
+            <h2>Choose Your Examination</h2>
+
+            <div class="exam-container">
+
+                <div class="exam-card" id="bcs">
+                    <h3>BCS Examination</h3>
+                    <p>Explore previous BCS questions and mock tests.</p>
+                    <button onclick="startExam('bcs')">
+                        Start BCS Exam
+                    </button>
+                </div>
+
+                <div class="exam-card" id="bank">
+                    <h3>Bank Examination</h3>
+                    <p>Practice Bangladesh bank recruitment questions.</p>
+                    <button onclick="startExam('bank')">
+                        Start Bank Exam
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>ExamVerse BD © 2026 | Personal Examination Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
