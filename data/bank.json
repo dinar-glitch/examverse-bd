@@ -1,0 +1,39 @@
+{
+  "examinations": [
+    {
+      "id": "bb_2015",
+      "name": "Bangladesh Bank",
+      "year": 2015,
+      "type": "Bangladesh Bank",
+      "questions": []
+    },
+    {
+      "id": "bb_2016",
+      "name": "Bangladesh Bank",
+      "year": 2016,
+      "type": "Bangladesh Bank",
+      "questions": []
+    },
+    {
+      "id": "combined_bank",
+      "name": "Combined Bank Recruitment",
+      "year": 2026,
+      "type": "Combined Bank",
+      "questions": []
+    },
+    {
+      "id": "sonali_bank",
+      "name": "Sonali Bank",
+      "year": 2026,
+      "type": "Sonali Bank",
+      "questions": []
+    },
+    {
+      "id": "janata_bank",
+      "name": "Janata Bank",
+      "year": 2026,
+      "type": "Janata Bank",
+      "questions": []
+    }
+  ]
+}
