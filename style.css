@@ -167,7 +167,87 @@ footer {
     margin-top: 50px;
 }
 
-/* Responsive Design */
+/* =========================
+   EXAMINATION PAGE
+========================= */
+
+#timer {
+    font-size: 22px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.exam-page {
+    padding: 40px 7%;
+}
+
+.exam-header {
+    margin-bottom: 30px;
+}
+
+.exam-header p {
+    color: #94a3b8;
+    margin-top: 10px;
+}
+
+.exam-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 25px;
+}
+
+.question-card,
+.question-sidebar {
+    background: #172238;
+    border: 1px solid #293751;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.question-card h3 {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+#optionsContainer label {
+    display: block;
+    padding: 15px;
+    margin: 12px 0;
+    background: #25334c;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#optionsContainer label:hover {
+    background: #334968;
+}
+
+.exam-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#questionPalette {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 20px 0;
+}
+
+#questionPalette button {
+    padding: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #dc2626;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
 @media (max-width: 768px) {
 
@@ -198,7 +278,19 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .exam-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-controls button {
+        flex: 1;
+    }
+
     main {
+        padding: 30px 5%;
+    }
+
+    .exam-page {
         padding: 30px 5%;
     }
 }
