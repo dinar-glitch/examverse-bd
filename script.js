@@ -51,9 +51,9 @@ async function startExam(type) {
 
         const data = await response.json();
 
-        const availableExams = data.filter(
-            exam => exam.questions && exam.questions.length > 0
-        );
+        const availableExams = data.examinations.filter(
+    exam => exam.questions && exam.questions.length > 0
+);
 
         if (!availableExams.length) {
             alert("Question bank is empty. We need to add questions first!");
